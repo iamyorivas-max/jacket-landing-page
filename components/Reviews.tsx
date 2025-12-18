@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Star } from 'lucide-react';
-import { REVIEWS } from '../constants';
+import { REVIEWS } from '../constants.tsx';
 
 const Reviews: React.FC = () => {
   return (

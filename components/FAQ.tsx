@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
-import { FAQS } from '../constants';
+import { FAQS } from '../constants.tsx';
 
 const FAQ: React.FC = () => {
   const [openId, setOpenId] = useState<number | null>(1);

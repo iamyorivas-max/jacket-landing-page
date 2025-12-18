@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { PRODUCT_IMAGES } from '../constants';
+import { PRODUCT_IMAGES } from '../constants.tsx';
 
 const ProductGallery: React.FC = () => {
   const [activeImage, setActiveImage] = useState(PRODUCT_IMAGES[0]);

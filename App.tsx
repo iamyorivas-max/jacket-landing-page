@@ -1,15 +1,15 @@
 
 import React from 'react';
-import AnnouncementBar from './components/AnnouncementBar';
-import Header from './components/Header';
-import ProductGallery from './components/ProductGallery';
-import CountdownTimer from './components/CountdownTimer';
-import OrderForm from './components/OrderForm';
-import ProductFeatures from './components/ProductFeatures';
-import Benefits from './components/Benefits';
-import Reviews from './components/Reviews';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
+import AnnouncementBar from './components/AnnouncementBar.tsx';
+import Header from './components/Header.tsx';
+import ProductGallery from './components/ProductGallery.tsx';
+import CountdownTimer from './components/CountdownTimer.tsx';
+import OrderForm from './components/OrderForm.tsx';
+import ProductFeatures from './components/ProductFeatures.tsx';
+import Benefits from './components/Benefits.tsx';
+import Reviews from './components/Reviews.tsx';
+import FAQ from './components/FAQ.tsx';
+import Footer from './components/Footer.tsx';
 
 const App: React.FC = () => {
   return (

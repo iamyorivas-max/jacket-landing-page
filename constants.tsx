@@ -8,7 +8,7 @@ import {
   CloudRain, 
   Package 
 } from 'lucide-react';
-import { ProductImage, Benefit, Review, FAQItem } from './types';
+import { ProductImage, Benefit, Review, FAQItem } from './types.ts';
 
 export const PRODUCT_IMAGES: ProductImage[] = [
   { url: 'https://picsum.photos/seed/jacket1/1000/1200', alt: 'TNF Reversible Jacket - Face A' },
