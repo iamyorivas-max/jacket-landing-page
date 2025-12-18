@@ -22,37 +22,37 @@ export const BENEFITS: Benefit[] = [
     id: 1,
     title: 'Reversible 2-in-1 Design',
     description: 'Switch looks instantly. One side sleek urban, one side rugged technical.',
-    icon: <Layers className="w-8 h-8 text-black" />,
+    icon: <Layers className="w-8 h-8" />,
   },
   {
     id: 2,
     title: 'Premium Insulation',
     description: 'Advanced Heatseeker™ technology keeps you warm in sub-zero conditions.',
-    icon: <Thermometer className="w-8 h-8 text-black" />,
+    icon: <Thermometer className="w-8 h-8" />,
   },
   {
     id: 3,
     title: 'Wind & Water Resistant',
     description: 'DWR finish and wind-blocking tech ensures you stay dry and comfortable.',
-    icon: <Wind className="w-8 h-8 text-black" />,
+    icon: <Wind className="w-8 h-8" />,
   },
   {
     id: 4,
     title: 'Perfect for Winter',
     description: 'Tested in extreme environments to guarantee performance in snow and ice.',
-    icon: <CloudRain className="w-8 h-8 text-black" />,
+    icon: <CloudRain className="w-8 h-8" />,
   },
   {
     id: 5,
     title: 'Built to Last',
     description: 'High-tenacity nylon ripstop ensures durability for years of use.',
-    icon: <ShieldCheck className="w-8 h-8 text-black" />,
+    icon: <ShieldCheck className="w-8 h-8" />,
   },
   {
     id: 6,
     title: 'Free Worldwide Shipping',
     description: 'Get your jacket delivered to your doorstep at no extra cost today.',
-    icon: <Package className="w-8 h-8 text-black" />,
+    icon: <Package className="w-8 h-8" />,
   },
 ];
 
