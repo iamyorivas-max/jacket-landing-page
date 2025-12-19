@@ -1,13 +1,24 @@
 
 import React from 'react';
+import LanguageSelector from './LanguageSelector.tsx';
+import { Language, translations } from '../translations.ts';
 
-const AnnouncementBar: React.FC = () => {
+interface AnnouncementBarProps {
+  lang: Language;
+  onLangChange: (lang: Language) => void;
+}
+
+const AnnouncementBar: React.FC<AnnouncementBarProps> = ({ lang, onLangChange }) => {
+  const t = translations[lang];
   return (
-    <div className="bg-black text-white text-center py-2 px-4 text-xs md:text-sm font-semibold sticky top-0 z-50 overflow-hidden">
-      <div className="flex justify-center items-center gap-2 animate-pulse">
-        <span role="img" aria-label="fire">🔥</span>
-        <span>Limited Stock – Free Delivery Today Only</span>
-        <span role="img" aria-label="fire">🔥</span>
+    <div className="bg-black text-white py-2 px-6 sticky top-0 z-50 overflow-hidden">
+      <div className="max-w-7xl mx-auto flex justify-between items-center gap-4">
+        <div className="flex-1 text-center md:text-left">
+          <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest animate-pulse inline-block">
+            {t.announcement}
+          </p>
+        </div>
+        <LanguageSelector currentLang={lang} onLangChange={onLangChange} />
       </div>
     </div>
   );

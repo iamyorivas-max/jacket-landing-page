@@ -4,7 +4,7 @@ import { ShoppingBag, Search, Menu } from 'lucide-react';
 
 const Header: React.FC = () => {
   return (
-    <nav className="bg-white py-6 px-6 md:px-12 border-b border-gray-100 sticky top-[32px] md:top-[40px] z-40">
+    <nav className="bg-white py-6 px-6 md:px-12 border-b border-gray-100 sticky top-[36px] md:top-[40px] z-40">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-4 md:hidden">
           <Menu className="w-6 h-6 text-black" />
@@ -14,11 +14,10 @@ const Header: React.FC = () => {
           THE NORTH FACE
         </div>
 
-        <div className="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-widest">
-          <a href="#" className="hover:text-gray-500 transition-colors">New Arrivals</a>
-          <a href="#" className="hover:text-gray-500 transition-colors">Men</a>
-          <a href="#" className="hover:text-gray-500 transition-colors">Women</a>
-          <a href="#" className="hover:text-gray-500 transition-colors">Exclusives</a>
+        <div className="hidden md:flex items-center gap-8 text-[10px] font-black uppercase tracking-[0.2em]">
+          <a href="#" className="hover:text-gray-500 transition-colors">Explorer</a>
+          <a href="#" className="hover:text-gray-500 transition-colors">Tech</a>
+          <a href="#" className="hover:text-gray-500 transition-colors">Series</a>
         </div>
 
         <div className="flex items-center gap-4 md:gap-6">
