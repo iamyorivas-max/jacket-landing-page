@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   ShieldCheck, 
@@ -11,10 +10,10 @@ import {
 import { ProductImage, Benefit, Review, FAQItem } from './types.ts';
 
 export const PRODUCT_IMAGES: ProductImage[] = [
-  { url: 'https://picsum.photos/seed/jacket1/1000/1200', alt: 'TNF Reversible Jacket - Face A' },
-  { url: 'https://picsum.photos/seed/jacket2/1000/1200', alt: 'TNF Reversible Jacket - Face B' },
-  { url: 'https://picsum.photos/seed/lifestyle1/1000/1200', alt: 'TNF Jacket Lifestyle Wear' },
-  { url: 'https://picsum.photos/seed/detail1/1000/1200', alt: 'TNF Jacket Close-up Detail' },
+  { url: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000&auto=format&fit=crop', alt: 'TNF Reversible Jacket - Face A' },
+  { url: 'https://images.unsplash.com/photo-1544923246-77307dd654ca?q=80&w=1000&auto=format&fit=crop', alt: 'TNF Reversible Jacket - Face B' },
+  { url: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=1000&auto=format&fit=crop', alt: 'TNF Jacket Lifestyle Wear' },
+  { url: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=1000&auto=format&fit=crop', alt: 'TNF Jacket Close-up Detail' },
 ];
 
 export const BENEFITS: Benefit[] = [
