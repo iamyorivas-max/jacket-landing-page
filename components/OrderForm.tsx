@@ -1,13 +1,8 @@
 
 import React, { useState } from 'react';
-import { Language, translations } from '../translations.ts';
+import { translations as t } from '../translations.ts';
 
-interface OrderFormProps {
-  lang: Language;
-}
-
-const OrderForm: React.FC<OrderFormProps> = ({ lang }) => {
-  const t = translations[lang];
+const OrderForm: React.FC = () => {
   const [formData, setFormData] = useState({
     color: 'TNF Black',
     size: 'M',
@@ -19,7 +14,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ lang }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`Order received! Merci ${formData.fullName}.`);
+    alert(`Commande reçue ! Merci ${formData.fullName}.`);
   };
 
   const sizes = ['S', 'M', 'L', 'XL', 'XXL'];
@@ -30,8 +25,8 @@ const OrderForm: React.FC<OrderFormProps> = ({ lang }) => {
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-extrabold text-black tracking-tight">{t.getYourJacket}</h2>
         <div className="text-right">
-          <span className="text-gray-400 line-through text-sm font-medium">$349.00</span>
-          <p className="text-2xl font-black text-red-600">$249.00</p>
+          <span className="text-gray-400 line-through text-sm font-medium">349.00€</span>
+          <p className="text-2xl font-black text-red-600">249.00€</p>
         </div>
       </div>
 
@@ -101,9 +96,9 @@ const OrderForm: React.FC<OrderFormProps> = ({ lang }) => {
           >
             <option value="Paris">Paris</option>
             <option value="Lyon">Lyon</option>
-            <option value="London">London</option>
-            <option value="Dubai">Dubai</option>
-            <option value="New York">New York</option>
+            <option value="Marseille">Marseille</option>
+            <option value="Lille">Lille</option>
+            <option value="Bordeaux">Bordeaux</option>
           </select>
         </div>
 

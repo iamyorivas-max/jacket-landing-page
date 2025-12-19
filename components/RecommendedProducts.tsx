@@ -1,15 +1,9 @@
 
 import React from 'react';
 import { RECOMMENDED_PRODUCTS } from '../constants.tsx';
-import { Language, translations } from '../translations.ts';
+import { translations as t } from '../translations.ts';
 
-interface RecommendedProductsProps {
-  lang: Language;
-}
-
-const RecommendedProducts: React.FC<RecommendedProductsProps> = ({ lang }) => {
-  const t = translations[lang];
-
+const RecommendedProducts: React.FC = () => {
   return (
     <section className="py-24 px-6 max-w-7xl mx-auto border-t border-gray-100">
       <div className="flex flex-col md:flex-row items-baseline justify-between mb-12 gap-4">

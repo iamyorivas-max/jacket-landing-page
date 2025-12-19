@@ -1,14 +1,9 @@
 
 import React from 'react';
 import { Ruler } from 'lucide-react';
-import { Language, translations } from '../translations.ts';
+import { translations as t } from '../translations.ts';
 
-interface SizeGuideProps {
-  lang: Language;
-}
-
-const SizeGuide: React.FC<SizeGuideProps> = ({ lang }) => {
-  const t = translations[lang];
+const SizeGuide: React.FC = () => {
   const sizeData = [
     { size: 'S', chest: '86 - 94', waist: '74 - 81', hips: '89 - 96' },
     { size: 'M', chest: '94 - 102', waist: '81 - 89', hips: '96 - 104' },
@@ -29,7 +24,7 @@ const SizeGuide: React.FC<SizeGuideProps> = ({ lang }) => {
           <table className="w-full text-left border-collapse min-w-[300px]">
             <thead>
               <tr className="border-b border-gray-200">
-                <th className="py-2 px-1 text-[10px] font-black uppercase text-gray-400">Size</th>
+                <th className="py-2 px-1 text-[10px] font-black uppercase text-gray-400">Taille</th>
                 <th className="py-2 px-1 text-[10px] font-black uppercase text-gray-400">{t.chest}</th>
                 <th className="py-2 px-1 text-[10px] font-black uppercase text-gray-400">{t.waist}</th>
                 <th className="py-2 px-1 text-[10px] font-black uppercase text-gray-400">{t.hips}</th>

@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import AnnouncementBar from './components/AnnouncementBar.tsx';
 import Header from './components/Header.tsx';
 import ProductGallery from './components/ProductGallery.tsx';
@@ -12,16 +12,13 @@ import Reviews from './components/Reviews.tsx';
 import FAQ from './components/FAQ.tsx';
 import Footer from './components/Footer.tsx';
 import SizeGuide from './components/SizeGuide.tsx';
-import { Language, translations } from './translations.ts';
+import { translations as t } from './translations.ts';
 import { PRODUCT_IMAGES } from './constants.tsx';
 
 const App: React.FC = () => {
-  const [lang, setLang] = useState<Language>('fr');
-  const t = translations[lang];
-
   return (
-    <div className="min-h-screen bg-white" dir={translations[lang].dir}>
-      <AnnouncementBar lang={lang} onLangChange={setLang} />
+    <div className="min-h-screen bg-white" dir="ltr">
+      <AnnouncementBar />
       <Header />
       
       <main>
@@ -48,12 +45,12 @@ const App: React.FC = () => {
                 <div className="flex text-yellow-400">
                   <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
-                <span className="text-xs font-bold text-gray-400">4.9 (1.2k+ Reviews)</span>
+                <span className="text-xs font-bold text-gray-400">4.9 (1.2k+ Avis)</span>
               </div>
             </div>
             
-            <SizeGuide lang={lang} />
-            <OrderForm lang={lang} />
+            <SizeGuide />
+            <OrderForm />
             
             {/* Urgency Badge */}
             <div className="bg-orange-50 p-4 rounded-xl border border-orange-100 flex items-center gap-4 mt-6">
@@ -77,7 +74,7 @@ const App: React.FC = () => {
         <ProductFeatures />
 
         {/* Cross-sell Section */}
-        <RecommendedProducts lang={lang} />
+        <RecommendedProducts />
 
         {/* Trust & Benefits */}
         <Benefits />
