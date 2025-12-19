@@ -12,15 +12,11 @@ import Reviews from './components/Reviews.tsx';
 import FAQ from './components/FAQ.tsx';
 import Footer from './components/Footer.tsx';
 import SizeGuide from './components/SizeGuide.tsx';
-import PhotoStudio from './components/PhotoStudio.tsx';
 import { Language, translations } from './translations.ts';
 import { PRODUCT_IMAGES } from './constants.tsx';
 
 const App: React.FC = () => {
   const [lang, setLang] = useState<Language>('fr');
-  // State for product images to allow updates from AI Studio
-  const [currentImages, setCurrentImages] = useState(PRODUCT_IMAGES);
-  const [isStudioOpen, setIsStudioOpen] = useState(false);
   const t = translations[lang];
 
   return (
@@ -33,15 +29,7 @@ const App: React.FC = () => {
         <section className="max-w-7xl mx-auto py-8 md:py-16 px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-7">
             <div className="relative">
-              <ProductGallery images={currentImages} />
-              {/* Floating button to trigger the AI generation modal */}
-              <button 
-                onClick={() => setIsStudioOpen(true)}
-                className="absolute top-4 right-4 bg-white/90 backdrop-blur px-4 py-2 rounded-full shadow-lg border border-gray-100 flex items-center gap-2 hover:scale-105 transition-all z-10"
-              >
-                <span className="text-purple-600">✨</span>
-                <span className="text-[10px] font-black uppercase tracking-widest">{t.openStudio}</span>
-              </button>
+              <ProductGallery images={PRODUCT_IMAGES} />
             </div>
             
             {/* Desktop Only Description - subtle */}
@@ -112,16 +100,6 @@ const App: React.FC = () => {
       </main>
 
       <Footer />
-
-      {/* Photo Studio Modal */}
-      <PhotoStudio 
-        lang={lang} 
-        isOpen={isStudioOpen} 
-        onClose={() => setIsStudioOpen(false)} 
-        onImageGenerated={(url) => {
-          setCurrentImages(prev => [{ url, alt: 'AI Generated' }, ...prev]);
-        }}
-      />
     </div>
   );
 };
