@@ -1,5 +1,7 @@
 
 import React, { useState } from 'react';
+import { Ruler } from 'lucide-react';
+import SizeGuide from './SizeGuide.tsx';
 
 const OrderForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +13,8 @@ const OrderForm: React.FC = () => {
     city: 'London',
   });
 
+  const [isSizeGuideOpen, setIsSizeGuideOpen] = useState(false);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert(`Order received! Thank you ${formData.fullName}. We will contact you at ${formData.phone}.`);
@@ -20,7 +24,12 @@ const OrderForm: React.FC = () => {
   const colors = ['TNF Black', 'Summit Navy', 'Burnt Olive'];
 
   return (
-    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-gray-100">
+    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-gray-100 relative">
+      <SizeGuide 
+        isOpen={isSizeGuideOpen} 
+        onClose={() => setIsSizeGuideOpen(false)} 
+      />
+      
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-extrabold text-black tracking-tight">Get Your Jacket</h2>
         <div className="text-right">
@@ -49,7 +58,17 @@ const OrderForm: React.FC = () => {
         </div>
 
         <div>
-          <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Choose Size</label>
+          <div className="flex items-center justify-between mb-2">
+            <label className="block text-xs font-bold uppercase tracking-wider text-gray-500">Choose Size</label>
+            <button 
+              type="button"
+              onClick={() => setIsSizeGuideOpen(true)}
+              className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors"
+            >
+              <Ruler className="w-3 h-3" />
+              Size Guide
+            </button>
+          </div>
           <div className="grid grid-cols-5 gap-2">
             {sizes.map(size => (
               <button
