@@ -37,7 +37,12 @@ export const translations = {
     footerDesc: 'Never Stop Exploring. Nous fournissons l\'équipement de la plus haute qualité pour les athlètes et l\'explorateur moderne.',
     claimJacket: 'Récupérez votre veste maintenant',
     recommendedTitle: 'Complétez Votre Équipement',
-    viewProduct: 'Voir le Produit'
+    viewProduct: 'Voir le Produit',
+    studioTitle: 'Studio Photo IA',
+    studioPrompt: 'Décrivez l\'image de produit souhaitée...',
+    studioGenerate: 'Générer l\'image',
+    studioGenerating: 'Création en cours...',
+    studioApply: 'Appliquer au site'
   },
   en: {
     dir: 'ltr',
@@ -74,7 +79,12 @@ export const translations = {
     footerDesc: 'Never Stop Exploring. We provide the highest quality gear for athletes and the modern explorer.',
     claimJacket: 'Claim Your Jacket Now',
     recommendedTitle: 'Complete Your Gear',
-    viewProduct: 'View Product'
+    viewProduct: 'View Product',
+    studioTitle: 'AI Photo Studio',
+    studioPrompt: 'Describe the product image you want...',
+    studioGenerate: 'Generate Image',
+    studioGenerating: 'Creating...',
+    studioApply: 'Apply to site'
   },
   ar: {
     dir: 'rtl',
@@ -111,6 +121,11 @@ export const translations = {
     footerDesc: 'Never Stop Exploring. نحن نوفر أعلى جودة من المعدات للرياضيين والمستكشف العصري.',
     claimJacket: 'احصل على سترك الآن',
     recommendedTitle: 'أكمل معداتك',
-    viewProduct: 'عرض المنتج'
+    viewProduct: 'عرض المنتج',
+    studioTitle: 'استوديو الصور بالذكاء الاصطناعي',
+    studioPrompt: 'صف صورة المنتج التي تريدها...',
+    studioGenerate: 'إنشاء الصورة',
+    studioGenerating: 'جاري الإنشاء...',
+    studioApply: 'تطبيق على الموقع'
   }
 };

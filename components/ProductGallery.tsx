@@ -1,9 +1,18 @@
 
-import React, { useState } from 'react';
-import { PRODUCT_IMAGES } from '../constants.tsx';
+import React, { useState, useEffect } from 'react';
+import { ProductImage } from '../types.ts';
 
-const ProductGallery: React.FC = () => {
-  const [activeImage, setActiveImage] = useState(PRODUCT_IMAGES[0]);
+interface ProductGalleryProps {
+  images: ProductImage[];
+}
+
+const ProductGallery: React.FC<ProductGalleryProps> = ({ images }) => {
+  const [activeImage, setActiveImage] = useState(images[0]);
+
+  // Synchronise l'image active si les images parent changent (ex: génération IA)
+  useEffect(() => {
+    setActiveImage(images[0]);
+  }, [images]);
 
   return (
     <div className="flex flex-col gap-4">
@@ -21,7 +30,7 @@ const ProductGallery: React.FC = () => {
 
       {/* Thumbnails */}
       <div className="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
-        {PRODUCT_IMAGES.map((img, idx) => (
+        {images.map((img, idx) => (
           <button
             key={idx}
             onClick={() => setActiveImage(img)}
