@@ -19,9 +19,19 @@ const PhotoStudio: React.FC<PhotoStudioProps> = ({ lang, isOpen, onClose, onImag
 
   const handleGenerate = async () => {
     if (!prompt) return;
+
+    // Trigger API key selection if using Imagen or advanced models as per guidelines
+    // @ts-ignore
+    if (window.aistudio && !(await window.aistudio.hasSelectedApiKey())) {
+      // @ts-ignore
+      await window.aistudio.openSelectKey();
+      // Guideline: Assume success after openSelectKey() call despite race conditions
+    }
+
     setIsGenerating(true);
     
     try {
+      // Guideline: Initialize client right before use to capture updated environment key
       const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
       // Utilisation du modèle Imagen 4 pour une qualité optimale
       const response = await ai.models.generateImages({
@@ -33,12 +43,26 @@ const PhotoStudio: React.FC<PhotoStudioProps> = ({ lang, isOpen, onClose, onImag
         },
       });
 
-      const base64Data = response.generatedImages[0].image.imageBytes;
-      const imageUrl = `data:image/png;base64,${base64Data}`;
-      setGeneratedImage(imageUrl);
-    } catch (error) {
+      if (response.generatedImages && response.generatedImages.length > 0) {
+        const base64Data = response.generatedImages[0].image.imageBytes;
+        const imageUrl = `data:image/png;base64,${base64Data}`;
+        setGeneratedImage(imageUrl);
+      } else {
+        throw new Error("API returned no images");
+      }
+    } catch (error: any) {
       console.error("Erreur de génération:", error);
-      alert("Une erreur est survenue lors de la génération. Vérifiez votre clé API.");
+      
+      // If error indicates project/billing issue, retry selection
+      if (error?.message?.includes("Requested entity was not found")) {
+        // @ts-ignore
+        if (window.aistudio) {
+          // @ts-ignore
+          await window.aistudio.openSelectKey();
+        }
+      }
+      
+      alert("Une erreur est survenue lors de la génération. Veuillez vérifier votre clé API.");
     } finally {
       setIsGenerating(false);
     }
@@ -89,7 +113,7 @@ const PhotoStudio: React.FC<PhotoStudioProps> = ({ lang, isOpen, onClose, onImag
             </button>
           </div>
 
-          <div className="aspect-square w-full max-w-sm mx-auto bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200 flex items-center justify-center overflow-hidden relative group">
+          <div className="aspect-square w-full max-sm mx-auto bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200 flex items-center justify-center overflow-hidden relative group">
             {generatedImage ? (
               <>
                 <img src={generatedImage} alt="Generated" className="w-full h-full object-cover" />

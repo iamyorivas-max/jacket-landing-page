@@ -38,11 +38,13 @@ export const translations = {
     claimJacket: 'Récupérez votre veste maintenant',
     recommendedTitle: 'Complétez Votre Équipement',
     viewProduct: 'Voir le Produit',
+    // Missing translations for PhotoStudio component
     studioTitle: 'Studio Photo IA',
-    studioPrompt: 'Décrivez l\'image de produit souhaitée...',
+    studioPrompt: 'Invite pour l\'IA',
+    studioGenerating: 'Génération...',
     studioGenerate: 'Générer l\'image',
-    studioGenerating: 'Création en cours...',
-    studioApply: 'Appliquer au site'
+    studioApply: 'Appliquer au produit',
+    openStudio: 'Ouvrir Studio IA'
   },
   en: {
     dir: 'ltr',
@@ -80,11 +82,13 @@ export const translations = {
     claimJacket: 'Claim Your Jacket Now',
     recommendedTitle: 'Complete Your Gear',
     viewProduct: 'View Product',
+    // Missing translations for PhotoStudio component
     studioTitle: 'AI Photo Studio',
-    studioPrompt: 'Describe the product image you want...',
+    studioPrompt: 'AI Prompt',
+    studioGenerating: 'Generating...',
     studioGenerate: 'Generate Image',
-    studioGenerating: 'Creating...',
-    studioApply: 'Apply to site'
+    studioApply: 'Apply to Product',
+    openStudio: 'Open AI Studio'
   },
   ar: {
     dir: 'rtl',
@@ -122,10 +126,12 @@ export const translations = {
     claimJacket: 'احصل على سترك الآن',
     recommendedTitle: 'أكمل معداتك',
     viewProduct: 'عرض المنتج',
+    // Missing translations for PhotoStudio component
     studioTitle: 'استوديو الصور بالذكاء الاصطناعي',
-    studioPrompt: 'صف صورة المنتج التي تريدها...',
-    studioGenerate: 'إنشاء الصورة',
+    studioPrompt: 'وصف الصورة',
     studioGenerating: 'جاري الإنشاء...',
-    studioApply: 'تطبيق على الموقع'
+    studioGenerate: 'إنشاء الصورة',
+    studioApply: 'تطبيق على المنتج',
+    openStudio: 'افتح استوديو الذكاء الاصطناعي'
   }
 };
