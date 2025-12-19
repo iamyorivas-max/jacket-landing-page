@@ -6,6 +6,7 @@ import ProductGallery from './components/ProductGallery.tsx';
 import CountdownTimer from './components/CountdownTimer.tsx';
 import OrderForm from './components/OrderForm.tsx';
 import ProductFeatures from './components/ProductFeatures.tsx';
+import RecommendedProducts from './components/RecommendedProducts.tsx';
 import Benefits from './components/Benefits.tsx';
 import Reviews from './components/Reviews.tsx';
 import FAQ from './components/FAQ.tsx';
@@ -71,6 +72,9 @@ const App: React.FC = () => {
 
         {/* Product Details & Usage */}
         <ProductFeatures />
+
+        {/* Cross-sell Section */}
+        <RecommendedProducts lang={lang} />
 
         {/* Trust & Benefits */}
         <Benefits />

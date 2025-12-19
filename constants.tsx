@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { 
   ShieldCheck, 
@@ -14,6 +15,37 @@ export const PRODUCT_IMAGES: ProductImage[] = [
   { url: 'https://images.unsplash.com/photo-1544923246-77307dd654ca?q=80&w=1000&auto=format&fit=crop', alt: 'TNF Reversible Jacket - Face B' },
   { url: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=1000&auto=format&fit=crop', alt: 'TNF Jacket Lifestyle Wear' },
   { url: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=1000&auto=format&fit=crop', alt: 'TNF Jacket Close-up Detail' },
+];
+
+export const RECOMMENDED_PRODUCTS = [
+  {
+    id: 1,
+    name: '1996 Retro Nuptse',
+    price: '$320',
+    image: 'https://images.unsplash.com/photo-1620215175664-cb9a6f595dfc?q=80&w=800&auto=format&fit=crop',
+    tag: 'Classic'
+  },
+  {
+    id: 2,
+    name: 'Denali Fleece',
+    price: '$180',
+    image: 'https://images.unsplash.com/photo-1630154060205-24231b4009f4?q=80&w=800&auto=format&fit=crop',
+    tag: 'Explorer'
+  },
+  {
+    id: 3,
+    name: 'McMurdo Parka',
+    price: '$400',
+    image: 'https://images.unsplash.com/photo-1542152591-665b634be99f?q=80&w=800&auto=format&fit=crop',
+    tag: 'Sub-Zero'
+  },
+  {
+    id: 4,
+    name: 'Himalayan Down',
+    price: '$600',
+    image: 'https://images.unsplash.com/photo-1545591316-73602f39294e?q=80&w=800&auto=format&fit=crop',
+    tag: 'Peak Performance'
+  }
 ];
 
 export const BENEFITS: Benefit[] = [

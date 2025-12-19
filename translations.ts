@@ -35,7 +35,9 @@ export const translations = {
     reviewsTitle: 'Ce que disent nos explorateurs',
     faqTitle: 'Questions Fréquentes ?',
     footerDesc: 'Never Stop Exploring. Nous fournissons l\'équipement de la plus haute qualité pour les athlètes et l\'explorateur moderne.',
-    claimJacket: 'Récupérez votre veste maintenant'
+    claimJacket: 'Récupérez votre veste maintenant',
+    recommendedTitle: 'Complétez Votre Équipement',
+    viewProduct: 'Voir le Produit'
   },
   en: {
     dir: 'ltr',
@@ -70,7 +72,9 @@ export const translations = {
     reviewsTitle: 'What Our Explorers Say',
     faqTitle: 'Questions?',
     footerDesc: 'Never Stop Exploring. We provide the highest quality gear for athletes and the modern explorer.',
-    claimJacket: 'Claim Your Jacket Now'
+    claimJacket: 'Claim Your Jacket Now',
+    recommendedTitle: 'Complete Your Gear',
+    viewProduct: 'View Product'
   },
   ar: {
     dir: 'rtl',
@@ -105,6 +109,8 @@ export const translations = {
     reviewsTitle: 'ماذا يقول مستكشفونا',
     faqTitle: 'الأسئلة الشائعة؟',
     footerDesc: 'Never Stop Exploring. نحن نوفر أعلى جودة من المعدات للرياضيين والمستكشف العصري.',
-    claimJacket: 'احصل على سترك الآن'
+    claimJacket: 'احصل على سترك الآن',
+    recommendedTitle: 'أكمل معداتك',
+    viewProduct: 'عرض المنتج'
   }
 };
