@@ -12,7 +12,7 @@ import { ProductImage, Benefit, Review, FAQItem } from './types.ts';
 
 export const PRODUCT_IMAGES: ProductImage[] = [
   { url: 'https://i.postimg.cc/tJRhrKq0/Design-sans-titre(84).png', alt: 'TNF Reversible Jacket - Face A' },
-  { url: 'https://i.postimg.cc/tJRhrKq0/Design-sans-titre(84).png', alt: 'TNF Reversible Jacket - Face B' },
+  { url: 'https://i.postimg.cc/fbdzFCBz/Generated-Image-December-20-2025-5-25PM.png', alt: 'TNF Reversible Jacket - Face B' },
   { url: 'https://i.postimg.cc/tJRhrKq0/Design-sans-titre(84).png', alt: 'TNF Jacket Lifestyle Wear' },
   { url: 'https://i.postimg.cc/tJRhrKq0/Design-sans-titre(84).png', alt: 'TNF Jacket Close-up Detail' },
 ];
